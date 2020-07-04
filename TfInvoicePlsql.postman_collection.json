@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "36ff2eac-3c0a-428a-afbd-5738dbe07e65",
+		"name": "TfInvoicePlsql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get invoice",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"POST_Input\": {\n        \"InputParameters\": {\n            \"INVOICE_ID\": \"1\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://vis1227.togglefox.com:8000/webservices/rest/TfInvoicePlsql/get_invoice/",
+					"protocol": "http",
+					"host": [
+						"vis1227",
+						"togglefox",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"webservices",
+						"rest",
+						"TfInvoicePlsql",
+						"get_invoice",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get invoice with status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"InputParameters\": {\r\n      \"INVOICE_ID\": \"1\"\r\n   }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://vis1227.togglefox.com:8000/webservices/rest/TfInvoicePlsql/get_invoice_with_status/",
+					"protocol": "http",
+					"host": [
+						"vis1227",
+						"togglefox",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"webservices",
+						"rest",
+						"TfInvoicePlsql",
+						"get_invoice_with_status",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete invoice",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"POST_Input\": {\n        \"InputParameters\": {\n            \"INVOICE_ID\": \"3\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://vis1227.togglefox.com:8000/webservices/rest/TfInvoicePlsql/delete_invoice/",
+					"protocol": "http",
+					"host": [
+						"vis1227",
+						"togglefox",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"webservices",
+						"rest",
+						"TfInvoicePlsql",
+						"delete_invoice",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get invoice with ctx params",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<POST_Input>\n    <RESTHeader>\n        <Responsibility>FND_REP_APP</Responsibility>\n        <RespApplication>FND</RespApplication>\n        <SecurityGroup>STANDARD</SecurityGroup>\n        <NLSLanguage>AMERICAN</NLSLanguage>\n        <Org_Id>202</Org_Id>\n    </RESTHeader>\n    <InputParameters>\n        <INVOICE_ID>1</INVOICE_ID>\n    </InputParameters>\n</POST_Input>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://vis1227.togglefox.com:8000/webservices/rest/TfInvoicePlsql/get_invoice/",
+					"protocol": "http",
+					"host": [
+						"vis1227",
+						"togglefox",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"webservices",
+						"rest",
+						"TfInvoicePlsql",
+						"get_invoice",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create invoice",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"POST_Input\": {\n        \"InputParameters\": {\n            \"INVOICE\": {\n                \"INVOICE_NUM\": \"1006\",\n                \"INVOICE_DATE\": \"2020-04-27\",\n                \"CUSTOMER_NUM\": \"82000\",\n                \"LINES\": {\n                    \"LINES_ITEM\": {\n                        \"LINE_NUM\": \"1\",\n                        \"DESCRIPTION\": \"new invoice 1006 description line 1\",\n                        \"QUANTITY\": \"4\",\n                        \"PRICE\": \"10\",\n                        \"LINE_AMOUNT\": \"40\"\n                    }\n                }\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://vis1227.togglefox.com:8000/webservices/rest/TfInvoicePlsql/create_invoice/",
+					"protocol": "http",
+					"host": [
+						"vis1227",
+						"togglefox",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"webservices",
+						"rest",
+						"TfInvoicePlsql",
+						"create_invoice",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update invoice",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"POST_Input\": {\n        \"InputParameters\": {\n            \"INVOICE\": {\n                \"INVOICE_ID\": \"44\",\n                \"INVOICE_NUM\": \"1006\",\n                \"INVOICE_DATE\": \"2020-04-27\",\n                \"CUSTOMER_NUM\": \"82000\",\n                \"LINES\": {\n                    \"LINES_ITEM\": {\n                    \t\"INVOICE_LINE_ID\" : \"62\",\n                        \"LINE_NUM\": \"1\",\n                        \"DESCRIPTION\": \"new invoice 1006 description line 1\",\n                        \"QUANTITY\": \"4\",\n                        \"PRICE\": \"10\",\n                        \"LINE_AMOUNT\": \"40\"\n                    }\n                }\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://vis1227.togglefox.com:8000/webservices/rest/TfInvoicePlsql/update_invoice/",
+					"protocol": "http",
+					"host": [
+						"vis1227",
+						"togglefox",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"webservices",
+						"rest",
+						"TfInvoicePlsql",
+						"update_invoice",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create invoice id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<POST_Input>\n    <InputParameters>\n        <INVOICE>\n            <INVOICE_NUM>1006</INVOICE_NUM>\n            <INVOICE_DATE>2020-04-27</INVOICE_DATE>\n            <CUSTOMER_NUM>82000</CUSTOMER_NUM>\n            <LINES>\n                <LINES_ITEM>\n                        <LINE_NUM>1</LINE_NUM>\n                        <DESCRIPTION>new invoice 1006 description line 1</DESCRIPTION>\n                        <QUANTITY>4</QUANTITY>\n                        <PRICE>10</PRICE>\n                        <LINE_AMOUNT>40</LINE_AMOUNT>\n                </LINES_ITEM>\n            </LINES>\n        </INVOICE>\n    </InputParameters>\n</POST_Input>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://vis1227.togglefox.com:8000/webservices/rest/TfInvoicePlsql/create_invoice_id/",
+					"protocol": "http",
+					"host": [
+						"vis1227",
+						"togglefox",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"webservices",
+						"rest",
+						"TfInvoicePlsql",
+						"create_invoice_id",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get invoices",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"POST_Input\": {\n        \"InputParameters\": {\n            \"INVOICE_NUM\": null,\n            \"INVOICE_DATE_FROM\": \"2020-04-10\",\n            \"INVOICE_DATE_TO\": null,\n            \"CUSTOMER_NUM\": null\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://vis1227.togglefox.com:8000/webservices/rest/TfInvoicePlsql/get_invoices/",
+					"protocol": "http",
+					"host": [
+						"vis1227",
+						"togglefox",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"webservices",
+						"rest",
+						"TfInvoicePlsql",
+						"get_invoices",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "changepassword",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "michael",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "aa7e35fe-8163-4535-82b7-012cd28266f4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "da060146-27d2-4f02-997f-7eb8e44752d9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
